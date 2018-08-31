@@ -7,7 +7,7 @@
 - java反射机制
 ## 项目采用IDEA+MAVEN
 ## 项目包结构：
-<img src="https://github.com/xiaxinandye/SpringIoC/blob/master/viewImage/1.PNG" />
+<p><img src="https://github.com/xiaxinandye/SpringIoC/blob/master/viewImage/1.PNG" /></p>
 ## 依赖文件：BeanUtils工具包、dom4j工具包
 
   
