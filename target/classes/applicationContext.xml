@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean name="student" class="com.yunche.entity.Student" scope="prototype">
+        <property name="name" value="小李"></property>
+    </bean>
+
+    <bean name="teacher" class="com.yunche.entity.Teacher" scope="prototype">
+        <property name="student" ref="student"></property>
+    </bean>
+
+    <bean name="person" class="com.yunche.entity.Person">
+        <property name="teacher" ref="teacher"></property>
+        <property name="Student" ref="student"></property>
+    </bean>
+
+</beans>
