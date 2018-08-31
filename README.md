@@ -11,7 +11,7 @@
 
 ## 依赖文件：BeanUtils工具包、dom4j工具包
 ## application.xml(用来存储对象的元数据，用于通过反射时创建对象。)
-<prev>
+<pre>
   <?xml version="1.0" encoding="UTF-8" ?>
 <beans>
     <bean name="student" class="com.yunche.entity.Student" scope="prototype">
@@ -28,23 +28,22 @@
     </bean>
 
 </beans>
-</prev>
+</pre>
 
 ## Student.java(学生实体类)
-- <prev>
-public class Student
-{
-    private String name;
+<pre>
+  public class Student
+  {
+      private String name;
+  
+      public String getName()
+      {
+          return name;
+      }
 
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-}
-
-</prev>
+      public void setName(String name)
+      {
+          this.name = name;
+      }
+  }
+</pre>
