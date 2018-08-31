@@ -7,7 +7,44 @@
 - java反射机制
 ## 项目采用IDEA+MAVEN
 ## 项目包结构：
-<p><img src="https://github.com/xiaxinandye/SpringIoC/blob/master/viewImage/1.PNG" /></p>
-## 依赖文件：BeanUtils工具包、dom4j工具包
+<p><img src="https://github.com/xiaxinandye/SpringIoC/blob/master/viewImage/1.PNG"></p>
 
-  
+## 依赖文件：BeanUtils工具包、dom4j工具包
+## application.xml(用来存储对象的元数据，用于通过反射时创建对象。)
+<prev>
+  <?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean name="student" class="com.yunche.entity.Student" scope="prototype">
+        <property name="name" value="小李"></property>
+    </bean>
+
+    <bean name="teacher" class="com.yunche.entity.Teacher" scope="prototype">
+        <property name="student" ref="student"></property>
+    </bean>
+
+    <bean name="person" class="com.yunche.entity.Person">
+        <property name="teacher" ref="teacher"></property>
+        <property name="Student" ref="student"></property>
+    </bean>
+
+</beans>
+</prev>
+
+## Student.java(学生实体类)
+- <prev>
+public class Student
+{
+    private String name;
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+}
+
+</prev>
